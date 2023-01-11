@@ -3,9 +3,9 @@ import { Card, CardBody, Col, Input, Label, Row } from "reactstrap"
 
 const ContactUs = () => {
   return (
-    <div className='d-flex justify-content-center mt-4'>
+    <div className='d-flex justify-content-center' style={{ marginTop: '7em' }}>
         <Col lg={6} md={12} className=''>
-            <h3>Contáctanos</h3>
+            <h3 className="text-center">Contáctanos</h3>
             <Card>
                 <CardBody>
                     <Row>

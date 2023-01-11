@@ -3,9 +3,9 @@ import { Col, Row } from 'reactstrap'
 
 const AboutUs = () => {
   return (
-    <div className=' d-flex justify-content-center mt-3'>
+    <div className=' d-flex justify-content-center' style={{ marginTop: '7em' }}>
         <Col lg={6} md={12} className=''>
-            <h3>Sobre nosotros</h3>
+            <h3 className='text-center'>Sobre nosotros</h3>
             <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting 
                 industry. Lorem Ipsum has been the industry's standard dummy text ever 
