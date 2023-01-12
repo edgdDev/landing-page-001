@@ -3,9 +3,9 @@ import { Col, Row } from 'reactstrap'
 
 const AboutUs = () => {
   return (
-    <div className=' d-flex justify-content-center' style={{ marginTop: '7em' }}>
+    <div className=' d-flex justify-content-center' style={{ marginTop: '7em' }} id='about' data-aos="zoom-in-up">
         <Col lg={6} md={12} className=''>
-            <h3 className='text-center'>Sobre nosotros</h3>
+            <h3 className='text-center mb-3'>Sobre nosotros</h3>
             <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting 
                 industry. Lorem Ipsum has been the industry's standard dummy text ever 
@@ -16,6 +16,13 @@ const AboutUs = () => {
                 the release of Letraset sheets containing Lorem Ipsum passages, and
                 more recently with desktop publishing software like Aldus PageMaker 
                 including versions of Lorem Ipsum.
+            </p>
+            <p>
+            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a 
+            piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a 
+            Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, 
+            from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable 
+            source
             </p>
         </Col>
     </div>

@@ -1,6 +1,6 @@
-import { Grid } from "@mui/material"
 import { useState } from "react";
 import { Navbar, NavbarToggler, Collapse, Nav, NavItem, NavLink } from "reactstrap"
+import MenuIcon from '@mui/icons-material/Menu'
 
 const NavbarMenu = () => {
 
@@ -11,21 +11,21 @@ const NavbarMenu = () => {
   return (
     <Navbar container='lg' expand='xl'>
         <NavbarToggler onClick={ handleToggle }>
-            <i>Toggler</i>
+            <MenuIcon />
         </NavbarToggler>
         <Collapse isOpen={ isOpen } navbar>
             <Nav className="me-auto" navbar>
                 <NavItem>
-                    <NavLink href="#">Inicio</NavLink>
+                    <NavLink href="#home">Inicio</NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink href="#">Sobre nosotros</NavLink>
+                    <NavLink href="#about">Sobre nosotros</NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink href="#">Facilidades</NavLink>
+                    <NavLink href="#cards">Facilidades</NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink href="#">Contáctanos</NavLink>
+                    <NavLink href="#contact">Contáctanos</NavLink>
                 </NavItem>
             </Nav>
         </Collapse>

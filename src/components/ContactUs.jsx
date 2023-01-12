@@ -1,11 +1,12 @@
 import { Button } from "@mui/material"
 import { Card, CardBody, Col, Input, Label, Row } from "reactstrap"
+import SendIcon from '@mui/icons-material/Send';
 
 const ContactUs = () => {
   return (
-    <div className='d-flex justify-content-center' style={{ marginTop: '7em' }}>
+    <div className='d-flex justify-content-center' style={{ marginTop: '7em' }} id='contact' data-aos="zoom-out-down">
         <Col lg={6} md={12} className=''>
-            <h3 className="text-center">Contáctanos</h3>
+            <h3 className="text-center mb-3">Contáctanos</h3>
             <Card>
                 <CardBody>
                     <Row>
@@ -37,7 +38,8 @@ const ContactUs = () => {
                         </Col>
                         <div className="mt-2">
                             <Button variant="contained">
-                                Enviar
+                                {' Enviar '}
+                                <SendIcon className="ms-1" />    
                             </Button>
                         </div>
                     </Row>

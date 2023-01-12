@@ -4,7 +4,7 @@ import '../styles/header.css'
 
 const Header = () => {
   return (
-    <div className='full' style={{ height: '50em' }}>
+    <div className='full' style={{ height: '50em' }} id='home'>
         <NavbarMenu />
         <div className='full-inner'>
           <div className='content'>

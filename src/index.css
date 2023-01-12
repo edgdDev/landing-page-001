@@ -13,5 +13,7 @@ code {
 }
 
 .footer {
-  background-color: #ffd5a3;
+  background-color: #ECECEC;
+  height: 300px; 
+  margin-top: 7em;
 }
