@@ -1,9 +1,9 @@
 import { useState } from "react"
-import { Button } from "@mui/material"
-import { Card, CardBody, Col, Input, Label, Row } from "reactstrap"
+import { Button, TextField } from "@mui/material"
+import { Card, CardBody, Col, Input, Row } from "reactstrap"
 import SendIcon from '@mui/icons-material/Send'
 import emailjs from '@emailjs/browser'
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 
 const initState = {
@@ -17,21 +17,34 @@ const ContactUs = () => {
 
   const [user, setUser] = useState(initState)
   const [isLoading, setLoading] = useState(false)
+  const [hasError, setError] = useState({ id: 0, message: '' })
 
   const handleForm = ({ key, value }) => setUser(s => ({ ...s, [key]: value }))
 
   const validationForm = () => {
     const { user_name, user_tel, user_email, user_message } = user
     if( user_name.length === 0 ) {
+        setError({ id: 1, message: 'Debe digitar su nombre' })
         return false
     }
     if( user_tel.length === 0 ) {
+        setError({ id: 2, message: 'Debe digitar su número de teléfono' })
+        return false
+    }
+    if( user_tel.length !== 10 ) {
+        setError({ id: 2, message: 'Debe digitar número de teléfono válido' })
         return false
     }
     if( user_email.length === 0 ) {
+        setError({ id: 3, message: 'Debe digitar su email' })
+        return false
+    }
+    if( !user_email.includes('@') ) {
+        setError({ id: 3, message: 'Debe digitar un email válido' })
         return false
     }
     if( user_message.length === 0 ) {
+        setError({ id: 4, message: 'Debe de completar este campo' })
         return false
     }
     return true
@@ -50,6 +63,8 @@ const ContactUs = () => {
 
     if ( status === 200 ) {
         setLoading(false)
+        setError({ id: 0, message: '' })
+        setUser(initState)
         return toast.success('¡Mensaje enviado exitosamente!', { autoClose: 3000 })
     }
     setLoading(false)
@@ -66,37 +81,65 @@ const ContactUs = () => {
                 <CardBody>
                     <Row>
                         <Col lg={6} md={12}>
-                            <Label>Nompre completo</Label>
-                            <Input 
-                                type="text"
+                            <TextField
+                                label='Nombre completo'
+                                variant="standard"
+                                error={ hasError.id === 1? true : false } 
+                                helperText={ hasError.id === 1? hasError.message : '' }
                                 name="user_name"
                                 onChange={({ target }) => handleForm({ key: target.name, value: target.value })}
+                                value={ user.user_name }
+                                disabled={ isLoading }
+                                fullWidth
                             />
                         </Col>
                         <Col lg={6} md={12}>
-                            <Label>Teléfono </Label>
-                            <Input 
-                                type="number"
+                            {/* <Label>Teléfono </Label> */}
+                            <TextField 
+                                // type="number"
+                                label='Teléfono'
+                                variant="standard"
+                                error={ hasError.id === 2? true : false } 
+                                helperText={ hasError.id === 2? hasError.message : '' }
                                 name="user_tel"
                                 onChange={({ target }) => handleForm({ key: target.name, value: target.value })}
+                                value={ user.user_tel }
+                                disabled={ isLoading }
+                                fullWidth
+                                inputProps={{ maxLength: 10 }}
                             />
                         </Col>
                     </Row>
-                    <Row className="mt-1">
+                    <Row className="mt-3">
                         <Col lg={6} md={12}>
-                            <Label>Email</Label>
-                            <Input 
-                                type="email"
+                            {/* <Label>Email</Label> */}
+                            <TextField 
+                                // type="email"
+                                label='Email'
+                                variant='standard'
+                                error={ hasError.id === 3? true : false } 
+                                helperText={ hasError.id === 3? hasError.message : '' }
                                 name="user_email"
                                 onChange={({ target }) => handleForm({ key: target.name, value: target.value })}
+                                value={ user.user_email }
+                                disabled={ isLoading }
+                                fullWidth
                             />
                         </Col>
                         <Col lg={12} md={12} className='mt-2'>
-                            <Input 
-                                type="textarea"
+                            <TextField 
+                                // type="textarea"
                                 name="user_message"
                                 onChange={({ target }) => handleForm({ key: target.name, value: target.value })}
-                                style={{ height: '161px' }}
+                                value={ user.user_message }
+                                disabled={ isLoading }
+                                variant='outlined'
+                                multiline
+                                rows={ 5 }
+                                fullWidth
+                                error={ hasError.id === 4? true : false } 
+                                helperText={ hasError.id === 4? hasError.message : '' }
+                                // style={{ height: '161px' }}
                             />
                         </Col>
                         <div className="mt-2">
