@@ -23,12 +23,9 @@ const ContactUs = () => {
 
   const validationForm = () => {
     const { user_name, user_tel, user_email, user_message } = user
+    const format = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/
     if( user_name.length === 0 ) {
         setError({ id: 1, message: 'Debe digitar su nombre' })
-        return false
-    }
-    if( user_tel.length === 0 ) {
-        setError({ id: 2, message: 'Debe digitar su número de teléfono' })
         return false
     }
     if( user_tel.length !== 10 ) {
@@ -40,6 +37,10 @@ const ContactUs = () => {
         return false
     }
     if( user_tel.includes('e') ) {
+        setError({ id: 2, message: 'Debe digitar número de teléfono válido' })
+        return false
+    }
+    if( format.test( user_tel ) ) {
         setError({ id: 2, message: 'Debe digitar número de teléfono válido' })
         return false
     }
