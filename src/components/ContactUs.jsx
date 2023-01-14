@@ -35,6 +35,10 @@ const ContactUs = () => {
         setError({ id: 2, message: 'Debe digitar número de teléfono válido' })
         return false
     }
+    if( isNaN(user_tel) ) {
+        setError({ id: 2, message: 'Debe digitar número de teléfono válido' })
+        return false
+    }
     if( user_email.length === 0 ) {
         setError({ id: 3, message: 'Debe digitar su email' })
         return false
