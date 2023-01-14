@@ -15,7 +15,7 @@ const Footer = () => {
           <TwitterIcon fontSize='large' className='ms-2' />
         </div>
         <div className='ms-5'>
-          <span>Developed By Elvin D. Guzman 2022 || Versión Alpha</span>
+          <span>Developed By Elvin D. Guzman 2023 || Versión Alpha</span>
         </div>
     </div>
   )

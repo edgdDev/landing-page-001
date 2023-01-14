@@ -31,3 +31,14 @@
     color: #f9f3f4;
     text-shadow: 0 0 300px black;
 }
+
+.navbar-menu {
+    /* background-color: #43424246; */
+    background-color: #4342421d;
+    transition: background-color 400ms ease;
+}
+
+.navbar-menu-active {
+    background-color: #434242fd;
+    transition: background-color 400ms ease;
+}
