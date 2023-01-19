@@ -81,9 +81,9 @@ const ContactUs = () => {
   }
 
   return (
-    <div className='d-flex justify-content-center' style={{ marginTop: '7em' }} id='contact' data-aos="zoom-out-down">
+    <div className='d-flex justify-content-center ms-3 me-3' style={{ marginTop: '7em' }} id='contact' data-aos="zoom-out-down">
         <Col lg={6} md={12} className=''>
-            <h3 className="text-center mb-3">Contáctanos</h3>
+            <h3 className="text-center mb-5 sub-title">Contáctanos</h3>
             <form onSubmit={ sendMessage }>
 
             <Card>

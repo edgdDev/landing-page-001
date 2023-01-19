@@ -2,10 +2,6 @@ import { useState } from "react";
 import { Navbar, NavbarToggler, Collapse, Nav, NavItem, NavLink } from "reactstrap"
 import MenuIcon from '@mui/icons-material/Menu'
 
-const nav_link = {
-    color: 'white',
-    fontWeight: 'bold'
-}
 
 const NavbarMenu = () => {
 
@@ -31,17 +27,17 @@ const NavbarMenu = () => {
         </NavbarToggler>
         <Collapse isOpen={ isOpen } navbar>
             <Nav className="me-auto" navbar>
-                <NavItem>
-                    <NavLink href="#home" style={ nav_link }>Inicio</NavLink>
+                <NavItem className="ms-5">
+                    <NavLink href="#home">Inicio</NavLink>
                 </NavItem>
-                <NavItem>
-                    <NavLink href="#about" style={ nav_link }>Sobre nosotros</NavLink>
+                <NavItem className="ms-5">
+                    <NavLink href="#about" >Sobre nosotros</NavLink>
                 </NavItem>
-                <NavItem>
-                    <NavLink href="#cards" style={ nav_link }>Facilidades</NavLink>
+                <NavItem className="ms-5">
+                    <NavLink href="#cards" >Facilidades</NavLink>
                 </NavItem>
-                <NavItem>
-                    <NavLink href="#contact" style={ nav_link }>Contáctanos</NavLink>
+                <NavItem className="ms-5">
+                    <NavLink href="#contact" >Contáctanos</NavLink>
                 </NavItem>
             </Nav>
         </Collapse>
