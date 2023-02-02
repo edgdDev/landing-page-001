@@ -1,28 +1,26 @@
 import React from 'react'
 import { Col, Row } from 'reactstrap'
+import logo from '../images/jed-solution.png'
 
 const AboutUs = () => {
   return (
     <div className=' d-flex justify-content-center ms-3 me-3' style={{ marginTop: '7em' }} id='about' data-aos="zoom-in-up">
-        <Col lg={6} md={12} className=''>
+        <Col lg={6} md={12} className='about'>
             <h3 className='text-center mb-3 mb-5 sub-title'>Sobre nosotros</h3>
+            <div className='text-center'>
+              <img src={ logo } alt='Logo JED' width={210} height={210} />
+            </div>
             <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting 
-                industry. Lorem Ipsum has been the industry's standard dummy text ever 
-                since the 1500s, when an unknown printer took a galley of type and 
-                scrambled it to make a type specimen book. It has survived not only 
-                five centuries, but also the leap into electronic typesetting, 
-                remaining essentially unchanged. It was popularised in the 1960s with 
-                the release of Letraset sheets containing Lorem Ipsum passages, and
-                more recently with desktop publishing software like Aldus PageMaker 
-                including versions of Lorem Ipsum.
+              JED solution está formado por un equipo de jóvenes profesionales, Con deseosos de innovar en el mercado actual. 
+              Brindando Soluciones en cada área de la tecnología, según las necesidades requeridas.
             </p>
             <p>
-            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a 
-            piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a 
-            Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, 
-            from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable 
-            source
+              Desarrollamos software y gestionamos los recursos necesarios para la implementación de soluciones tecnológicas a la medida. 
+              Complementadas con servicios de soporte técnico y mantenimiento de equipo informático.
+            </p>
+            <p>
+              En JED solution es una empresa independiente de desarrollo. Esta empresa surge debido al auge de demandas en el área de tecnología. 
+              Nuestra meta es brindarle un sistema de calidad lo cual todo nuestro cliente se sienta satisfecho.
             </p>
         </Col>
     </div>

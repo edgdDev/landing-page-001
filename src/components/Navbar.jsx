@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Navbar, NavbarToggler, Collapse, Nav, NavItem, NavLink } from "reactstrap"
 import MenuIcon from '@mui/icons-material/Menu'
-
+import logo from '../images/jed-logo.png'
 
 const NavbarMenu = () => {
 
@@ -27,6 +27,9 @@ const NavbarMenu = () => {
         </NavbarToggler>
         <Collapse isOpen={ isOpen } navbar>
             <Nav className="me-auto" navbar>
+                <NavItem className="ms-5">
+                    <img src={ logo } alt='Logo JED' width={40} height={40} className={ navbar? 'logo' : '' } />
+                </NavItem>
                 <NavItem className="ms-5">
                     <NavLink href="#home">Inicio</NavLink>
                 </NavItem>

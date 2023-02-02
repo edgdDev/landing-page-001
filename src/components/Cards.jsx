@@ -1,4 +1,4 @@
-import { Card, CardBody, CardImg, CardText, CardTitle, Col, Row } from "reactstrap"
+import { Col, Row } from "reactstrap"
 import card1 from '../images/card1.png'
 import card1_1 from '../images/card1_1.jpg'
 import card2 from '../images/card2.png'
@@ -56,10 +56,8 @@ const Cards = () => {
                         />
                     </div>
                     <p className="card-text">
-                    is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
-                    text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially 
-                    unchanged.
+                        Nuestros sistemas cuentan con los más modernos diseños UX/UI, para brindar una experiencia de usuario única y satisfactoria. 
+                        Trabajamos con los framework react y NextJS, también con herramientas como figma y canvas. Con estas tecnologías damos una experiencia en software más friendly para el usuario. 
                     </p>
                 </div>
               
@@ -74,10 +72,8 @@ const Cards = () => {
                         />
                     </div>
                     <p className="card-text">
-                    is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
-                    text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially 
-                    unchanged.
+                        La seguridad es algo primordial para estos tiempos, manejamos distintas herramientas para cumplir con los más altos estándares de seguridad y privacidad de nuestros clientes, 
+                        fortaleciendo nuestros servicios.
                     </p>
                 </div>
                 <div className="" style={{ width: '720px', height: '500px', marginLeft: '5em' }}>
@@ -103,10 +99,8 @@ const Cards = () => {
                         />
                     </div>
                     <p className="card-text">
-                    is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
-                    text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially 
-                    unchanged.
+                        Multiplataforma nos caracterizamos en brindar soluciones tecnológicas en cualquier sistema operativo, llevando nuestros servicios a donde el cliente guste sin ninguna limitación o frontera.
+                         Trabajamos distintas áreas de desarrollo como son mobile, web y desktop. 
                     </p>
                 </div>
               

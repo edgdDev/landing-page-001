@@ -39,6 +39,7 @@
 .content p {
     font-weight: lighter;
     color: rgb(140, 138, 138);
+    font-size: 2rem;
 }
 
 .navbar-menu {
@@ -62,4 +63,8 @@
 .navbar-menu-active a {
     color: rgb(255, 254, 254);
     font-weight: bold;
+}
+
+.logo {
+    display: none;
 }

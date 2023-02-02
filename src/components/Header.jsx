@@ -9,9 +9,8 @@ const Header = () => {
         <NavbarMenu />
         <div className='full-inner'>
           <div className='content'>
-            <h1>JED Solution</h1>
-            <p className=''>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+            <h1 data-aos="fade-up">JED Solution</h1>
+            <p className='' data-aos="fade-up" data-aos-delay='400'>You got it, We too</p>
           </div>
         </div>
     </div>
