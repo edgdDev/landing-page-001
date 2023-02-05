@@ -1,6 +1,6 @@
 import React from 'react'
 import { Col, Row } from 'reactstrap'
-import logo from '../images/jed-solution.png'
+import logo from '../images/jedlogo.png'
 
 const AboutUs = () => {
   return (

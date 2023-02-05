@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Navbar, NavbarToggler, Collapse, Nav, NavItem, NavLink } from "reactstrap"
 import MenuIcon from '@mui/icons-material/Menu'
-import logo from '../images/jed-logo.png'
+import logo from '../images/jedlogo2.png'
 
 const NavbarMenu = () => {
 
