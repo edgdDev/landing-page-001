@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 code {
@@ -44,9 +46,5 @@ code {
   border-bottom: 1px solid #5b0d93;
   border-bottom-width: 3px;
   padding-bottom: 5px;
-}
-
-.about {
-  font-family: 'Manrope', sans-serif;
-  font-family: 'Noto Sans', sans-serif;
+  /* font-weight: 300; */
 }
