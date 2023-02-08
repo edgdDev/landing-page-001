@@ -16,6 +16,7 @@
     width: 100vw;
     height: 100vh;
     animation: banner 10s infinite linear alternate;
+    animation-timing-function: ease-in-out;
     background-size: 100% 100%;
     position: relative;
     display: flex;
@@ -25,7 +26,7 @@
 
 .banner::before {
     content: url(../images/banner3.jpg)
-             url(../images/banner1.jpg)
+             /* url(../images/banner1.jpg) */
              url(../images/banner2.png)
              url(../images/banner4.jpeg);
     position:absolute; 
@@ -39,9 +40,9 @@
     0%, 20%{
         background-image: url(../images/banner3.jpg);
     }
-    25%, 45%{
+    /* 25%, 45%{
         background-image: url(../images/banner1.jpg);
-    }
+    } */
     50%, 70%{
         background-image: url(../images/banner2.png);
     }
