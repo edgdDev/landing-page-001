@@ -22,29 +22,28 @@ const NavbarMenu = () => {
 
   return (
     <Navbar container='lg' expand='xl' fixed="top" className={ navbar? 'navbar-menu-active' : 'navbar-menu' }>
-        <NavbarBrand>
+        {/* <NavbarBrand>
             <img src={ logo } alt='Logo JED' width={190} height={50} className={ navbar? 'logo' : '' } />
-        </NavbarBrand>
+        </NavbarBrand> */}
         <NavbarToggler onClick={ handleToggle }>
             <MenuIcon style={{ color: '#fff' }} />
         </NavbarToggler>
         <Collapse isOpen={ isOpen } navbar>
-            {/* <Nav className="me-auto align-items-center bg-dark" navbar> */}
             <Nav className={ `me-auto align-items-center ${isOpen && 'bg-dark'}` } navbar>
-                {/* <NavItem className="ms-5">
+                <NavItem className="ms-5">
                     <img src={ logo } alt='Logo JED' width={190} height={50} className={ navbar? 'logo' : '' } />
-                </NavItem> */}
-                <NavItem className="ms-5">
-                    <NavLink href="#home">Inicio</NavLink>
                 </NavItem>
                 <NavItem className="ms-5">
-                    <NavLink href="#about" >Sobre nosotros</NavLink>
+                    <NavLink href="#home" onClick={ () => isOpen && handleToggle() }>Inicio</NavLink>
                 </NavItem>
                 <NavItem className="ms-5">
-                    <NavLink href="#cards" >Facilidades</NavLink>
+                    <NavLink href="#about" onClick={ () => isOpen && handleToggle() }>Sobre nosotros</NavLink>
                 </NavItem>
                 <NavItem className="ms-5">
-                    <NavLink href="#contact" >Contáctanos</NavLink>
+                    <NavLink href="#cards" onClick={ () => isOpen && handleToggle() }>Facilidades</NavLink>
+                </NavItem>
+                <NavItem className="ms-5">
+                    <NavLink href="#contact" onClick={ () => isOpen && handleToggle() }>Contáctanos</NavLink>
                 </NavItem>
             </Nav>
         </Collapse>
