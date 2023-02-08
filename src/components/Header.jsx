@@ -9,7 +9,7 @@ const Header = () => {
         <NavbarMenu />
         <div className="capa"></div>
         <div className="info" data-aos="fade-up">
-          <h1>Bienvenidos a <br></br>JED SOLUTION</h1>
+          <h1>Bienvenido a <br></br>JED SOLUTION</h1>
           <p>
             'You got it, We too'. No importa que tan complejo y difícil sea el proyecto. Nosotros te ayudamos y aceptamos el desafío. ¿Te atreves? 
           </p>
