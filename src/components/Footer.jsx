@@ -30,7 +30,7 @@ const Footer = () => {
       </div>
       <ul className='social_icon'>
         <li>
-          <a href='https://www.instagram.com/jone24gm/' target='_blank'>
+          <a href='https://www.instagram.com/jed.solution/' target='_blank'>
             <InstagramIcon fontSize='large' />
           </a>
         </li>
