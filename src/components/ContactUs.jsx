@@ -68,7 +68,7 @@ const ContactUs = () => {
         return toast.warn('Debes de completar todos los campos correctamente.', { autoClose: 3000 })
     }
 
-    const { status } = await emailjs.sendForm('service_529o1k7', 'template_abdtz3i', event.target, '3DswzkQeKSM9jUrSc')
+    const { status } = await emailjs.sendForm('service_qibr6tq', 'template_abdtz3i', event.target, '3DswzkQeKSM9jUrSc')
 
     if ( status === 200 ) {
         setLoading(false)
